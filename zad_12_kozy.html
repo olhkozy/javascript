@@ -1,0 +1,24 @@
+<html>
+<body>
+<div style="color:green;font-size:50px;">
+<script language="JavaScript">
+var D1_koz=prompt("Data1=","");
+var D2_koz=prompt("Godzina1=","");
+var G1_koz=prompt("Data2=","");
+var G2_koz=prompt("Godzina2=","");
+var sekund;
+var a=parseFloat(D1_koz);
+var b=parseFloat(G1_koz);
+var c=parseFloat(D2_koz);
+var d=parseFloat(G2_koz);
+sekund=((a-b)*24+c-d)*3600;
+document.write("Ilość sekund "+a+" i "+b+" = "+sekund+"<br>");
+function okno_zamknij_kozyr()
+{
+window.close()
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
+</body>
+</html>
