@@ -1,0 +1,41 @@
+</script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+ zadanie11-kod
+ <HTML>
+ <HEAD>
+ <TITLE>zadanie 11-kod</TITLE>
+ </HEAD>
+ <BODY>
+ <SCRIPT type="text/javascript" src="zad_11_kozy.html"></SCRIPT>
+ </BODY>
+</HTML>
+<html>
+    <body>
+    <div style="color:green;font-size:50px;">
+    <script language="JavaScript">
+    var D1_koz=prompt("Data1=","");
+    var D2_koz=prompt("Data2=","");
+    var sekund;
+    var a=parseFloat(D1_koz);
+    var b=parseFloat(D2_koz);
+    sekund=(a-b)*24*60*60;
+    document.write("Ilość sekund "+a+" i "+b+" = "+sekund+"<br>");
+    function okno_zamknij_kozyr()
+    {
+    window.close()
+    }
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
+    </body>
+    </html>    
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

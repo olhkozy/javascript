@@ -1,31 +1,44 @@
+<!DOCTYPE html>
 <html>
-<body>
-<textarea cols="100%" rows="100%">
-    <html>
-<body>
-<div style="color:darkblue;font-size:100%;">
-<script language="JavaScript">
-var D1_koz=prompt("A=","");
-var D2_koz=prompt("B=","");
-var a=parseFloat(D1_koz);
-var b=parseFloat(D2_koz);
-var c;
-var d;
-var e;
-var f;
-var o;
-c=a*a*a;
-d=3*a*a*b;
-e=3*a*b*b;
-f=b*b*b;
-o=c+d+e+f;
-document.write("("+a+" + "+b+")^3= "+a+"^3 + 3*(("+a+")^2)*("+b+") + 3*("+a+")*(("+b+")^2) + "+b+"^3 = "+c+" + "+d+" + "+e+" + "+f+" = "+o+"<br>");
-function okno_zamknij_kozyr()
-{
-window.close()
-}
-</script>
-</div>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
-</body>
+  <head>
+    <title> zadanie 13 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+        <!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        var aKoz = Number(prompt("A=" + ""));
+        var bKoz = Number(prompt("B=" + ""));
+
+        var result = aKoz**3 + 3*aKoz**2*bKoz + 3*aKoz*bKoz**2 + bKoz**3;
+
+        document.write("Wczytane liczby: A=" + aKoz + " B=" + bKoz + "<br>");
+        document.write(
+          '(' + aKoz + ' + ' + bKoz + ')^3 = ' +
+          aKoz + '^3 + 3*' + aKoz + '^2*' + bKoz + ' + 3*' + 
+          aKoz + '*' + bKoz + '^2 + ' + bKoz + '^3 = ' +
+          result
+        );
+
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
 </html>

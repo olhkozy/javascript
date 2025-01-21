@@ -1,20 +1,22 @@
+<!DOCTYPE html>
 <html>
-<body>
-<div style="color:green;font-size:50px;">
-<script language="JavaScript">
-var D1_koz=prompt("Data1=","");
-var D2_koz=prompt("Data2=","");
-var sekund;
-var a=parseFloat(D1_koz);
-var b=parseFloat(D2_koz);
-sekund=(a-b)*24*60*60;
-document.write("Ilość sekund "+a+" i "+b+" = "+sekund+"<br>");
-function okno_zamknij_kozyr()
-{
-window.close()
-}
-</script>
-</div>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
-</body>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green;font-size:50px;">
+    <script language="JavaScript">
+        var d1koz = prompt("D1=" + "");
+        var d2koz = prompt("D2=" + "");
+        var daysAmount = d1koz - d2koz;
+        var secondsAmount = daysAmount * 86400;
+
+        document.write("D1=" + d1koz + "<br>");
+        document.write("D2=" + d2koz + "<br>");
+        document.write("Ilość sekund=" + secondsAmount + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
 </html>

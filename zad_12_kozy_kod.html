@@ -1,27 +1,44 @@
+<!DOCTYPE html>
 <html>
-<body>
-<textarea cols="100%" rows="100%">
-<html>
-<body>
-<div style="color:green;font-size:50px;">
-<script language="JavaScript">
-var D1_koz=prompt("Data1=","");
-var D2_koz=prompt("Godzina1=","");
-var G1_koz=prompt("Data2=","");
-var G2_koz=prompt("Godzina2=","");
-var sekund;
-var a=parseFloat(D1_koz);
-var b=parseFloat(G1_koz);
-var c=parseFloat(D2_koz);
-var d=parseFloat(G2_koz);
-sekund=((a-b)*24+c-d)*3600;
-document.write("Ilość sekund "+a+" i "+b+" = "+sekund+"<br>");
-function okno_zamknij_kozyr()
-{
-window.close()
-}
-</script>
-</div>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
-</body>
-</html>
+  <head>
+    <title> zadanie 12 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+        &lt;!DOCTYPE html&gt;
+        <html>
+          &lt;head&gt;
+            &lt;title&gt; proste obliczenia&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div style="color:green; font-size:50px;"&gt;
+            &lt;script language="JavaScript"&gt;
+                const d1koz = prompt("d1=" + "");
+                const g1koz = prompt("g1=" + "");
+                const d2koz = prompt("d2=" + "");
+                const g2koz = prompt("g2=" + "");
+        
+                const hoursAmount = (d1koz - d2koz) * 24 + (g1koz - g2koz);
+                const secondsAmount = hoursAmount * 3600;
+        
+                document.write("d1=" + d1koz + "&lt;br&gt;");
+                document.write("d2=" + d2koz + "&lt;br&gt;");
+                document.write("g1=" + g1koz + "&lt;br&gt;");
+                document.write("g2=" + g2koz + "&lt;br&gt;");
+                document.write("Ilość sekund=" + secondsAmount + "&lt;br&gt;");
+            &lt;/script>
+            &lt;/div>
+            &lt;input type="button" value="zamknij okno" onclick="window.close()"/>
+          &lt;/body>
+        &lt;/html>

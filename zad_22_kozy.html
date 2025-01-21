@@ -1,0 +1,27 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_kozyr()
+ {
+var a_koz= parseFloat(document.getElementById('dlugosc').value);
+var b_koz= parseFloat(document.getElementById('dlugosc2').value);
+var c_koz= b_koz*a_koz;
+ document.getElementById("nazwa").innerHTML ="Pole= "+c_koz.toFixed(2)+" cm^2"; 
+ }
+ function obwod_kozyr()
+ {
+var a_koz= parseFloat(document.getElementById('dlugosc').value);
+var b_koz= parseFloat(document.getElementById('dlugosc2').value);
+var c_koz= 2*b_koz+2*a_koz;
+ document.getElementById("nazwa").innerHTML ="Obwód= "+c_koz.toFixed(2)+" cm"; 
+ }
+</script>
+Podaj długość jednego boku: <input type="text" id="dlugosc"> cm<br><br><br>
+Podaj długość drugiego boku: <input type="text" id="dlugosc2"> cm<br><br><br>
+<input type="button" name="wyprowadz_pole_koz" value="Oblicz pole" Onclick="pole_kozyr()"><br><br>
+<input type="button" name="wyprowadz_obwod_koz" value="Oblicz obwod" Onclick="obwod_kozyr()"><br><br>
+</body>
+</html>

@@ -1,26 +1,37 @@
+<!DOCTYPE html>
 <html>
-<body>
-<textarea cols="100%" rows="100%">
+  <head>
+    <title> zadanie 13 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+        <!DOCTYPE html>
 <html>
-<body>
-<div style="color:green;font-size:50px;">
-<script language="JavaScript">
-var m_koz=prompt("m=","");
-var b;
-var a=parseFloat(m_koz);
-b=a*2;
-document.write("1/"+a+" = 1/"+b+" + 1/"+b+"<br>");
-var m1_koz=prompt("m1=","");
-var d;
-var c=parseFloat(m1_koz);
-d=c*2;
-document.write("1/"+c+" =1/"+d+" + 1/"+d+"<br>");
-function okno_zamknij_kozyr()
-{
-window.close()
-}
-</script>
-</div>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
-</body>
+  <head>
+    <title> zadanie 15</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        const m1koz = Number(prompt("M=" + ""));
+
+        const ulamek = "1/" + (m1koz * 2);
+
+        document.write("m=" + m1koz + "<br>");
+        document.write("1/" + m1koz +" = " + ulamek + "+" + ulamek + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
 </html>
