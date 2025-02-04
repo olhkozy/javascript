@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> zadanie 17 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  &lt;html><br>
+&lt;head><br>
+ &lt;meta charset="UTF-8"><br>
+ &lt;link rel="stylesheet" href="styl.css"><br>
+&lt;/head><br>
+&lt;body><br>
+&lt;script type="text/javascript"><br>
+ function AB_kozyr()
+ {
+var a_koz= parseFloat(document.getElementById('dlugosc').value);<br>
+var b_koz= a_koz*a_koz;<br>
+ document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_koz.toFixed(2)+" cm^2"; <br>
+ }<br>
+ function BC_kozyr()<br>
+ {<br>
+var a_koz= parseFloat(document.getElementById('dlugosc').value);<br>
+var b_koz= 4*a_koz;<br>
+ document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_koz.toFixed(2)+" cm";<br>
+ }<br>
+    function AC_kozyr()<br>
+ {<br>
+    
+ }<br>
+&lt;/script>
+ &lt;h1>Wszystko o TRÓJKĄCIE</h1><br><br>
+ Podaj długość boku xa: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ Podaj długość boku ya: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ Podaj długość boku xb: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ Podaj długość boku yb: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ Podaj długość boku xc: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ Podaj długość boku yc: &lt;input type="text" id="dlugosc"> cm<br><br><br>
+ &lt;input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozyr()"><br><br>
+ &lt;input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozyr()"><br><br>
+ &lt;div style="color:red;font-size:50px;"id="nazwa"></div><br>
+&lt;/body><br>
+&lt;/html>

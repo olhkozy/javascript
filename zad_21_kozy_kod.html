@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> zadanie 17 kod</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  &lt;html><br>
+&lt;head><br>
+&lt;title><br>
+Przykład obliczenia V i Pc walca<br>
+&lt;/title><br>
+&lt;script language="JavaScript"><br>
+function V(r,h)<br>
+{<br>
+r_liczba=parseFloat(r)<br>
+h_liczba=parseFloat(h)<br>
+V_wynik=Math.PI*r_liczba*r_liczba*h_liczba<br>
+document.getElementsByName('obj')[0].value=V_wynik.toFixed(2); /* na dokument */<br>
+alert("V="+V_wynik.toFixed(2)+" cm^3"); /*do okna Alert */<br>
+pokaz1.innerHTML="V="+V_wynik.toFixed(2)+" cm^3"+"<br>"; /* do tabeli */<br>
+29<br>
+}<br>
+function Pc(r,h)<br>
+{<br>
+r_liczba=parseFloat(r)<br>
+h_liczba=parseFloat(h)<br>
+Pc_wynik=2*Math.PI*r_liczba*r_liczba+2*Math.PI*r_liczba*h_liczba<br>
+document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);<br>
+alert("Pc="+Pc_wynik.toFixed(2)+" cm^2");<br>
+pokaz2.innerHTML="Pc="+Pc_wynik.toFixed(2)+"cm^2";<br>
+}<br>
+&lt;/script><br>
+&lt;/head><br>
+&lt;body><br>
+Pobliczanie V i Pc walca<br>
+<br> <br>
+&lt;form name="formularz" action="..." onsubmit="V(this.promien.value,this.wysokosc.value);<br>
+Pc(this.promien.value,this.wysokosc.value);return false"><br>
+Podaj r=<br>
+&lt;input size="6" name="promien"><br>
+Podaj h=<br>
+&lt;input size="6" name="wysokosc">
+<br> <br>
+&lt;input TYPE="submit" Value="oblicz" >
+<br> <br>
+V=<br>
+&lt;input size="6" name="obj">
+Pc=<br>
+&lt;input size="6" name="pole"><br>
+&lt;/form><br>
+&lt;table><br>
+&lt;tr id="pokaz1"></tr><br>
+&lt;tr id="pokaz2"></tr><br>
+&lt;/table><br>
+&lt;/body><br>
+&lt;/html>
