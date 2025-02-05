@@ -1,51 +1,82 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title> zadanie 17 kod</title>
-    <meta charset="utf-8">
-    <style>
-      textarea {
-        color:rgb(102, 102, 102); 
-        font-size:15px; 
-        resize: none;
-        height: 90vh;
-        width: 90vw;
-      }
-    </style>
-  </head>
-  &lt;html><br>
-&lt;head><br>
- &lt;meta charset="UTF-8"><br>
- &lt;link rel="stylesheet" href="styl.css"><br>
-&lt;/head><br>
-&lt;body><br>
-&lt;script type="text/javascript"><br>
- function AB_kozyr()
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
  {
-var a_koz= parseFloat(document.getElementById('dlugosc').value);<br>
-var b_koz= a_koz*a_koz;<br>
- document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_koz.toFixed(2)+" cm^2"; <br>
- }<br>
- function BC_kozyr()<br>
- {<br>
-var a_koz= parseFloat(document.getElementById('dlugosc').value);<br>
-var b_koz= 4*a_koz;<br>
- document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_koz.toFixed(2)+" cm";<br>
- }<br>
-    function AC_kozyr()<br>
- {<br>
-    
- }<br>
-&lt;/script>
- &lt;h1>Wszystko o TRÓJKĄCIE</h1><br><br>
- Podaj długość boku xa: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku ya: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku xb: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku yb: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku xc: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku yc: &lt;input type="text" id="dlugosc"> cm<br><br><br>
- &lt;input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozyr()"><br><br>
- &lt;input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozyr()"><br><br>
- &lt;div style="color:red;font-size:50px;"id="nazwa"></div><br>
-&lt;/body><br>
-&lt;/html>
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+  <html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function AB_koz() {
+      let aX_koz = parseFloat(document.getElementById('aX').value);
+      let aY_koz = parseFloat(document.getElementById('aY').value);
+
+      let bX_koz = parseFloat(document.getElementById('bX').value);
+      let bY_koz = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_koz - bX_koz) ** 2 + (aY_koz - bY_koz) ** 2)).toFixed(2);
+    }
+
+    function BC_koz() {
+      let bX_koz = parseFloat(document.getElementById('bX').value);
+      let bY_koz = parseFloat(document.getElementById('bY').value);
+
+      let cX_koz = parseFloat(document.getElementById('cX').value);
+      let cY_koz = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_koz - bX_koz) ** 2 + (cY_koz - bY_koz) ** 2)).toFixed(2);
+    }
+
+    function AC_koz() {
+      let aX_koz = parseFloat(document.getElementById('aX').value);
+      let aY_koz = parseFloat(document.getElementById('aY').value);
+      let cX_koz = parseFloat(document.getElementById('cX').value);
+      let cY_koz = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_koz - cX_koz) ** 2 + (aY_koz - cY_koz) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_koz()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_koz()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_koz()"><br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</html>
+  

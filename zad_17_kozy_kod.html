@@ -1,82 +1,92 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title> zadanie 17 kod</title>
-    <meta charset="utf-8">
-    <style>
-      textarea {
-        color:rgb(102, 102, 102); 
-        font-size:15px; 
-        resize: none;
-        height: 90vh;
-        width: 90vw;
-      }
-    </style>
-  </head>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zadanie 17</title>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
 </head>
-&lt;body>
-&lt;script>
-    function okno_zamknij_kozyr()<br>
-{<br>
-window.close()<br>
-}<br>
-&lt;/script&gt;<br>
-    &lt;h2&gt;1. Sposoby wyprowadzania danych w JavaScript:</h2><br>
-    &lt;ul&gt;<br>
-        &lt;li>z użyciem <code>document.write()</code></li><br>
-        &lt;li>z użyciem <code>alert()</code></li><br>
-        &lt;li>do okienek formularza</li><br>
-        &lt;li>do tabeli</li><br>
-    &lt;/ul>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
 
-    &lt;h2>2. Funkcja w JavaScript (4 podpunkty):</h2><br>
-    &lt;ol><br>
-        &lt;li>Zbiór zgrupowanych instrukcji.</li><br>
-        &lt;li>Uruchamianie poprzez nazwę.</li><br>
-        &lt;li>Argumenty funkcji.</li><br>
-        &lt;li>Zwracanie wartości.</li><br>
-    &lt;/ol><br>
-
-    &lt;h2>3. Metody obiektu <code>document</code>:</h2><br>
-    &lt;table border="1"><br>
-        &lt;thead><br>
-            &lt;tr><br>
-                &lt;th>Metoda</th><br>
-                &lt;th>Opis</th><br>
-            &lt;/tr><br>
-        &lt;/thead><br>
-        &lt;tbody><br>
-            &lt;tr><br>
-                &lt;td><code>getElementById("id")</code></td><br>
-                &lt;td>Dostęp do wszystkich elementów o konkretnej wartości atrybutu <code>id</code>.</td><br>
-            &lt;/tr><br>
-            &lt;tr><br>
-                &lt;td><code>getElementsByTagName("znacznik")</code></td><br>
-                &lt;td>Dostęp do wszystkich elementów o typie znacznika, np. P lub DIV.</td><br>
-            &lt;/tr><br>
-            &lt;tr><br>
-                &lt;td><code>getElementsByName("nazwa")</code></td><br>
-                &lt;td>Dostęp do wszystkich elementów o konkretnej wartości atrybutu <code>name</code>.</td><br>
-            &lt;/tr><br>
-        &lt;/tbody><br>
-    &lt;/table><br>
-
-    &lt;h2>4. Właściwości elementu:</h2><br>
-    &lt;ul><br>
-        &lt;li>&lt;strong>innerHTML:</strong> Pozwala na odczyt, zmodyfikowanie, wstawienie lub usunięcie kodu HTML z danego elementu.</li><br>
-        &lt;li>&lt;strong>innerText:</strong> Umożliwia określenie ciągu znaków, który zostanie umieszczony w elemencie, pomijając formatowanie HTML.</li><br>
-        &lt;li>&lt;strong>className:</strong> Pozwala określić klasę CSS używaną do prezentacji elementu.</li><br>
-    &lt;/ul><br>
-
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
-</body>
-</html>
-
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title> proste obliczenia</title>
+        <meta charset="utf-8">
+        <style>
+          table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+              padding: 8px;
+              text-align: left;
+          }
+      </style>
+      </head>
+      <body>
+        <h2>1. Cztery sposoby wyjścia danych na stronę w JS:</h2>
+    <ul>
+        <li>za pomocą <code>document.write()</code></li>
+        <li>za pomocą okienka <code>alert()</code></li>
+        <li>do pól formularza</li>
+        <li>do tabeli</li>
+    </ul>
+    
+    <h2>2. Funkcja w JS:</h2>
+    <ul>
+        <li>To zbiór grupowanych instrukcji, które można wywołać po nazwie.</li>
+        <li>Podczas wywołania wykonuje swój wewnętrzny kod.</li>
+        <li>Może mieć argumenty przekazywane do funkcji.</li>
+        <li>Może zwracać wartość za pomocą słowa kluczowego <code>return</code>.</li>
+    </ul>
+    
+    <h2>3. Wybrane metody obiektu document:</h2>
+    <table>
+        <tr>
+            <th>Metoda</th>
+            <th>Opis</th>
+        </tr>
+        <tr>
+            <td><code>getElementById("id")</code></td>
+            <td>Dostęp do elementu o konkretnej wartości atrybutu id.</td>
+        </tr>
+        <tr>
+            <td><code>getElementsByTagName("znacznik")</code></td>
+            <td>Dostęp do wszystkich elementów danego typu znacznika, np. P lub DIV.</td>
+        </tr>
+        <tr>
+            <td><code>getElementsByName("nazwa")</code></td>
+            <td>Dostęp do wszystkich elementów o konkretnej wartości atrybutu name.</td>
+        </tr>
+    </table>
+    
+    <h2>4. Właściwości elementów:</h2>
+    <ul>
+        <li><strong>innerHTML</strong>: Pozwala czytać, modyfikować, wstawiać lub usuwać kod HTML z danego elementu HTML.</li>
+        <li><strong>innerText</strong>: Określa ciąg znaków, który zostanie umieszczony w elemencie.</li>
+        <li><strong>className</strong>: Określa klasę CSS używaną do prezentacji elementu.</li>
+    </ul>
+    
+    <h2>Przykład:</h2>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+    ...
+    &lt;div id="nazwa"&gt;&lt;/div&gt;
+    &lt;script&gt;
+    document.getElementById("nazwa").innerHTML = "Witaj";
+    document.getElementById("nazwa").className = "wyróżnienieCzerwone";
+    &lt;/script&gt;
+    ...
+    </pre>
+        <input type="button" value="zamknij okno" onclick="window.close()"/>
+      </body>
+    </html>
+ </textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()"/>
+<script type="text/javascript">
+</script>
 </body>
 </html>

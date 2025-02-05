@@ -1,29 +1,33 @@
-<!DOCTYPE html>
-<head>
-<title> Użycie fukcji </title>
-<meta charset="utf-8">
-</head>
+
+<!DOCTYPE html> 
+ <head> 
+ <title> Użycie fukcji </title> 
+ <meta charset="utf-8"> 
+ </head> 
 <body>
-<div style="color:navy;font-size:50px;">
-<script language="JavaScript">
-var a=parseFloat(prompt("a=",""));
-var b=parseFloat(prompt("b=",""));
-function suma_koz(a, b) {
-return a + b;
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function odejm_koz(a, b) {
+ return a-b;
+ }
+ function mnożkw_koz(a, b) {
+ return a * b;
+ }
+ function kwadr_koz(a) {
+ return a*a;
+ }
+ function kwadr_koz(b) {
+ return b*b;
 }
-    function odejm_koz(a, b) {
-    return a - b;
-    }
-        function mnoz_koz(a,b) {
-        return a * b;
-        }
-            function kwadrat_koz(a) {
-            return a*a;
-            }
-            function kwadrat1_koz(b) {
-                return b*b;
-            }
-            document.write("odejmowanie="+odejm_koz(a,b)+"<br>"+"mnożenie="+mnoz_koz(a,b)+"<br>"+"kwadrat_koz="+kwadrat_koz(a)+"<br>"+"kwadrat1_koz="+kwadrat1_koz(b)+"<br>");
-            </script>
+ function reszta_koz(a,b) {
+ return a/b;
+ }
+ document.write("odejmowanie =" + odejm_koz(a,b) +"<br>" + "mnożenie =" + mnożkw_koz(a,b) + "<br>" + a + "^2 =" + kwadr_koz(a) + "<br>" + b + "^2 = " + kwadr_koz(b) + "<br>" + "reszta z dzielenia = " + reszta_koz(a,b) + "<br>");
+ 
+</script>
+</div>
 </body>
 </html>
+<input type="button" value="zamknij okno" onclick="window.close()"/>

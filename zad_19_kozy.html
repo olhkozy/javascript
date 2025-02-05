@@ -5,23 +5,24 @@
 </head>
 <body>
 <script type="text/javascript">
- function pole_kozyr()
+ function pole()
  {
-var a_koz= parseFloat(document.getElementById('dlugosc').value);
-var b_koz= a_koz*a_koz;
- document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_koz.toFixed(2)+" cm^2"; 
+var a= parseFloat(document.getElementById('dlugosc').value);
+var b= a*a;
+ document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2"; 
  }
- function obwod_kozyr()
+ function obwod()
  {
-var a_koz= parseFloat(document.getElementById('dlugosc').value);
-var b_koz= 4*a_koz;
- document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_koz.toFixed(2)+" cm"; 
+var a= parseFloat(document.getElementById('dlugosc').value);
+var b= 4*a;
+ document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm"; 
  }
 </script>
  <h1>Wszystko o KWADRACIE</h1><br><br>
  Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
- <input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozyr()"><br><br>
- <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozyr()"><br><br>
+ <input type="button" name="pole" value="Oblicz pole" Onclick="pole()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod()"><br><br>
  <div style="color:red;font-size:50px;"id="nazwa"></div>
 </body>
 </html>
+<input type="button" value="zamknij okno" onclick="window.close()"/>

@@ -1,36 +1,69 @@
 <html>
+
 <head>
- <meta charset="UTF-8">
- <link rel="stylesheet" href="styl.css">
+  <meta charset="UTF-8">
 </head>
+
 <body>
-<script type="text/javascript">
- function AB_kozyr()
- {
-var a_koz= parseFloat(document.getElementById('dlugosc').value);
-var b_koz= a_koz*a_koz;
- document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_koz.toFixed(2)+" cm^2"; 
- }
- function BC_kozyr()
- {
-var a_koz= parseFloat(document.getElementById('dlugosc').value);
-var b_koz= 4*a_koz;
- document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_koz.toFixed(2)+" cm"; 
- }
-    function AC_kozyr()
- {
-    
- }
-</script>
- <h1>Wszystko o TRÓJKĄCIE</h1><br><br>
- Podaj długość boku xa: <input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku ya: <input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku xb: <input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku yb: <input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku xc: <input type="text" id="dlugosc"> cm<br><br><br>
- Podaj długość boku yc: <input type="text" id="dlugosc"> cm<br><br><br>
- <input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozyr()"><br><br>
- <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozyr()"><br><br>
- <div style="color:red;font-size:50px;"id="nazwa"></div>
+  <script>
+    function AB_koz() {
+      let aX_koz = parseFloat(document.getElementById('aX').value);
+      let aY_koz = parseFloat(document.getElementById('aY').value);
+
+      let bX_koz = parseFloat(document.getElementById('bX').value);
+      let bY_koz = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_koz - bX_koz) ** 2 + (aY_koz - bY_koz) ** 2)).toFixed(2);
+    }
+
+    function BC_koz() {
+      let bX_koz = parseFloat(document.getElementById('bX').value);
+      let bY_koz = parseFloat(document.getElementById('bY').value);
+
+      let cX_koz = parseFloat(document.getElementById('cX').value);
+      let cY_koz = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_koz - bX_koz) ** 2 + (cY_koz - bY_koz) ** 2)).toFixed(2);
+    }
+
+    function AC_koz() {
+      let aX_koz = parseFloat(document.getElementById('aX').value);
+      let aY_koz = parseFloat(document.getElementById('aY').value);
+      let cX_koz = parseFloat(document.getElementById('cX').value);
+      let cY_koz = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_koz - cX_koz) ** 2 + (aY_koz - cY_koz) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_koz()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_koz()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_koz()"><br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
 </body>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
 </html>
