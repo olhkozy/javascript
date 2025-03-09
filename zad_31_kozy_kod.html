@@ -10,34 +10,33 @@
 <body>
  <form>
  <textarea name="siejka" cols="80" rows="20" readonly>
-    <html>
-<head>
-<script type="text/javascript">
-var spodnie = {
-rodzaj: 'jeans',
-kolor: 'czarne',
-rozmiar: 's',
-pokaz: function ()
-{
-document.write(this.rodzaj + ' ' + this.kolor)
-}
-}
-spodnie.pokaz();
-spodnie.cena=150;
-spodnie.wypisz=function(){alert('Cena:'+this.cena + 'zł')}
-spodnie.wypisz();
-</script>
-</head>
-<body>
-<br>
-Programowanie obiektowe. <br>
-Obiekt to spodnie<br>
-Pola:<br>
-rodzaj<br>
-kolor<br>
-rozmiar<br>
-metoda: pokaz<br>
-nowe pole to cena<br>
-nowa metoda to wypisz();<br>
-</body>
+  </head>
+  <html>
+<html>
+ <head>
+  <script type="text/javascript">
+   var spodnie = {
+    rodzaj: 'spodnie elastyczne',
+    płeć: 'kobieta',
+    cena: '65,00',
+    pokaz: function ()
+    {
+     document.write(this.rodzaj + ' - rodzaj,  ' + this.płeć + ' - płeć,  ' + this.cena + 'zl')
+    }
+   }
+   spodnie.pokaz();
+   spodnie.materiał="bawełna";
+   spodnie.wypisz= function() {alert('materiał: ' + this.materiał )}
+   spodnie.wypisz();
+   function okno_zamknij_kozyr()
+   {
+    window.close()
+   }
+  </script>
+ </head>
+ <body>
+  <br>
+  <a href="https://allegro.pl/oferta/spodnie-elastyczne-z-wysokim-stanem-wyszczuplajace-dlugie-bawelniane-16717233662">link do spodni</a>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
+ </body>
 </html>

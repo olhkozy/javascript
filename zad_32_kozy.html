@@ -1,41 +1,41 @@
 <html>
 <head>
-<script type="text/javascript">
-var spodnie = {
-rodzaj: 'jeans',
-kolor: 'czarne',
-rozmiar: 's',
-pokaz: function ()
-{
-document.write(this.rodzaj + ' ' + this.kolor)
-}
-}
-spodnie.pokaz();
-spodnie.cena=150;
-spodnie.wypisz=function(){alert('Cena:'+this.cena + 'zł')}
-spodnie.wypisz();
+    <script type="text/javascript">
 
-function klient(firma_k,model_k,cena_k)//początek konstruktora
-{
-this.firma=firma_k;
-this.model=model_k;
-this.cena=cena_k;
-}
-klient.prototype.wypisz = function ()
-{document.write(this.firma + ' ' + this.model+ ' ' + this.cena+"<br>");
-};
-var spodnie1 = new klient("mango", "wide leg", "159");
-var spodnie2 = new klient("zara", "mom", "109");
-spodnie1.wypisz();
-spodnie2.wypisz();
-  function okno_zamknij_kozyr()
-{
-window.close()
-}
- </script>
- </head>
+        function Spodnie(rodzaj, plec, cena, material) {
+            this.rodzaj = rodzaj;
+            this.plec = plec;
+            this.cena = cena;
+            this.material = material;
+        }
+
+        Spodnie.prototype.pokaz = function () {
+            alert("Rodzaj: " + this.rodzaj + "\nPłeć: " + this.plec + "\nCena: " + this.cena + " zł\nMateriał: " + this.material);
+        };
+        var spodnie1 = new Spodnie("spodnie elastyczne", "kobieta", "65,00", "bawełna");
+        var spodnie2 = new Spodnie("jeansy", "mężczyzna", "120,00", "denim");
+        var spodnie3 = new Spodnie("dresy", "dziecko", "50,00", "poliester");
+
+        spodnie1.pokaz();
+        spodnie2.pokaz();
+        spodnie3.pokaz();
+
+        Spodnie.prototype.sklep = "allegro";
+
+        Spodnie.prototype.spodnie_pokaz_sklep = function () {
+            alert("Sklep: " + this.sklep);
+        };
+
+        spodnie1.spodnie_pokaz_sklep();
+        spodnie2.spodnie_pokaz_sklep();
+        spodnie3.spodnie_pokaz_sklep();
+
+        document.write("<h2>Dane o spodniach:</h2>");
+        document.write("<p>1. " + spodnie1.rodzaj + ", " + spodnie1.plec + ", " + spodnie1.cena + " zł, " + spodnie1.material + "</p>");
+        document.write("<p>2. " + spodnie2.rodzaj + ", " + spodnie2.plec + ", " + spodnie2.cena + " zł, " + spodnie2.material + "</p>");
+        document.write("<p>3. " + spodnie3.rodzaj + ", " + spodnie3.plec + ", " + spodnie3.cena + " zł, " + spodnie3.material + "</p>");
+  </script>
+</head>
 <body>
-<br>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_kozyr()"/>
 </body>
 </html>
