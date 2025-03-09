@@ -1,0 +1,36 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 39</title>
+</head>
+<body>
+    <h1 style="color: green"> MENU</h1><br><br>
+    <h2 style="color: red"> 1-czerwony</h2>
+    <h2 style="color: blue"> 2-niebieski</h2>
+    <input type="button" name="kozyr" value="Oblicz" onclick="fun_koz()" /> 
+  <script> 
+    function fun_koz() { 
+      var x_koz = prompt("Podaj kolor", ""); 
+        if(x_koz == 1 || x_koz.toLowerCase() == "czerwony") { 
+  document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); } 
+        else if(x_koz == 2 || x_koz.toLowerCase() == "niebieski") { 
+  document.write('<h6 style="color:blue;">wczytałeś kolor niebieski</h6><br />'); 
+  } 
+  } 
+ </script> 
+</body>
+</html>
