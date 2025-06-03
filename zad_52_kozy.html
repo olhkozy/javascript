@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Równa Ramka</title>
+  <style>
+    pre {
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <pre id="ramka"></pre>
+
+  <script>
+    const wysokosc = (5 % 4) + 5;
+    const szerokosc = (4 % 6) + 20; 
+
+    let rysunek = "";
+    for (let i = 0; i < szerokosc; i++) {
+      rysunek += "*";
+    }
+    rysunek += "\n";
+    for (let i = 0; i < wysokosc; i++) {
+      rysunek += "*";
+      for (let j = 0; j < szerokosc - 2; j++) {
+        rysunek += " ";
+      }
+      rysunek += "*\n";
+    }
+
+    for (let i = 0; i < szerokosc; i++) {
+      rysunek += "*";
+    }
+
+    document.getElementById("ramka").textContent = rysunek;
+  </script>
+</body>
+</html>

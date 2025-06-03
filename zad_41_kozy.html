@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodzaje pętli</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #222;
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    code {
+      display: block;
+      background: #f2f2f2;
+      padding: 10px;
+      border-left: 4px solid #888;
+      margin: 10px 0;
+      white-space: pre-wrap;
+    }
+    img {
+      max-width: 300px;
+      margin: 10px 0;
+    }
+    .petla {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rodzaje pętli</h1>
+
+  <div class="petla">
+    <h2>1) Pętla <code>for</code></h2>
+    <strong>Konstrukcja:</strong>
+    <code>
+for (zainicjowanie_zmiennej; warunek_kończący_wykonywanie_pętli; zmiana_zmiennej) {
+    // kod, który zostanie wykonany pewną ilość razy
+}
+    </code>
+    <strong>Opis:</strong>
+    <p>Pętla <code>for</code> wykonuje blok kodu określoną liczbę razy. Najpierw ustalana jest zmienna początkowa, potem sprawdzany warunek, a na końcu zwiększana (lub zmniejszana) zmienna sterująca.</p>
+    <img src="for.png" alt="Schemat blokowy pętli for">
+  </div>
+
+  <div class="petla">
+    <h2>2) Pętla <code>while</code> – z kontrolowanym wejściem</h2>
+    <strong>Konstrukcja:</strong>
+    <code>
+while (warunek) {
+    // kod wykonywany dopóki warunek jest spełniony
+}
+    </code>
+    <strong>Opis:</strong>
+    <p>Pętla <code>while</code> najpierw sprawdza warunek, a dopiero potem wykonuje kod. Może nie wykonać się ani razu, jeśli warunek od początku jest fałszywy.</p>
+    <img src="while.png" alt="Schemat blokowy pętli while">
+  </div>
+
+  <div class="petla">
+    <h2>3) Pętla <code>do...while</code> – z kontrolowanym wyjściem</h2>
+    <strong>Konstrukcja:</strong>
+    <code>
+do {
+    // ...fragment kodu który będzie powtarzany...
+} while (false);
+    </code>
+    <strong>Opis:</strong>
+    <p>Pętla <code>do...while</code> najpierw wykona instrukcję, a dopiero potem sprawdza warunek. Dzięki temu zawsze wykona się przynajmniej jeden raz – nawet jeśli warunek jest fałszywy.</p>
+    <img src="do_while.png" alt="Schemat blokowy pętli do...while">
+  </div>
+
+</body>
+</html>

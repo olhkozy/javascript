@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 54 - prostokąt z gwiazdek</title>
+</head>
+<body>
+  <pre id="output"></pre>
+
+  <script>
+    const imie = prompt("Podaj swoje imię:");
+    const nazwisko = prompt("Podaj swoje nazwisko:");
+
+    const dlugosc_imienia = imie.length;
+    const dlugosc_nazwiska = nazwisko.length;
+
+    const a = (dlugosc_nazwiska % 4) + 5; 
+    const b = (dlugosc_imienia % 6) + 20; 
+
+    let wynik = "";
+
+    for (let i = 0; i < b; i++) {
+      wynik += "*";
+    }
+    wynik += "\n";
+
+    for (let i = 0; i < a - 2; i++) {
+      wynik += "*";
+      for (let j = 0; j < b - 2; j++) {
+        wynik += " ";
+      }
+      wynik += "*\n";
+    }
+    for (let i = 0; i < b; i++) {
+      wynik += "*";
+    }
+    document.getElementById("output").textContent = wynik;
+  </script>
+</body>
+</html>

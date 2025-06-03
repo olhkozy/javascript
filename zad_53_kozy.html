@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 53 – prostokąt z gwiazdek</title>
+</head>
+<body>
+  <script>
+    const a_kow = parseInt(prompt("Podaj szerokość prostokąta (a):", "20")); 
+    const b_kow = parseInt(prompt("Podaj wysokość prostokąta (b):", "6"));  
+
+    for (let i_kow = 1; i_kow <= a_kow; i_kow++) {
+      document.write("*");
+    }
+    document.write("<br>");
+
+    let wiersz_kow = "*";
+    for (let i = 1; i <= (a_kow - 2); i++) {
+      wiersz_kow += "&nbsp;&nbsp;";
+    }
+    wiersz_kow += "*";
+
+    for (let j_kow = 1; j_kow <= (b_kow - 2); j_kow++) {
+      document.write(wiersz_kow + "<br>");
+    }
+
+    for (let i_kow = 1; i_kow <= a_kow; i_kow++) {
+      document.write("*");
+    }
+  </script>
+</body>
+</html>

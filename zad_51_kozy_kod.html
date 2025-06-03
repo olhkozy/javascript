@@ -1,0 +1,33 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_siejka()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="siejka" cols="80" rows="20" readonly>
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 51 – Inicjały i powtórzenia</title>
+</head>
+<body>
+  <script>
+    const ile_powtorzen = parseInt(prompt("ile razy powtórzyć=", "5"));
+    const inicjaly = prompt("podaj twoje inicjały=", "OK");
+
+    for (let i_ok = 1; i_ok <= ile_powtorzen; i_ok++) {
+      let spacje = "";
+      for (let k_ok = 1; k_ok <= i_ok; k_ok++) {
+        spacje += "&nbsp;";
+      }
+      document.write(spacje + i_ok + "_" + inicjaly + "_" + i_ok + "<br>");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 47</title>
+</head>
+<body>
+  <script>
+    let a_koz, b_koz, c_koz;
+    do {
+      a_koz = parseFloat(prompt("Podaj bok a (> 0):", ""));
+    } while (!(a_koz > 0));
+
+    do {
+      b_koz = parseFloat(prompt("Podaj bok b (> 0):", ""));
+    } while (!(b_koz > 0));
+
+    do {
+      c_koz = parseFloat(prompt("Podaj bok c (> 0):", ""));
+    } while (!(c_koz > 0));
+
+    const trojkatMozliwy =
+      a_koz + b_koz > c_koz &&
+      a_koz + c_koz > b_koz &&
+      b_koz + c_koz > a_koz;
+
+    if (trojkatMozliwy) {
+      document.write(
+         "Taki trójkąt może istnieć.<br>" +
+        "Boki: " + a_koz + " cm, " + b_koz + " cm, " + c_koz + " cm<br>"
+      );
+    } else {
+      document.write(
+        "Taki trójkąt NIE może istnieć.<br>" +
+        "Boki: " + a_koz + " cm, " + b_koz + " cm, " + c_koz + " cm<br>"
+      );
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 38</title>
+    <style>
+        body {
+            background-color: silver;
+            text-align: center;
+        }
+        .menu {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let imie = prompt("Podaj swoje imię:");
+        let nazwisko = prompt("Podaj swoje nazwisko:");
+        let dzienUrodzenia = parseInt(prompt("Podaj dzień urodzenia:"));
+        let numerDziennika = parseInt(prompt("Podaj numer w dzienniku:"));
+
+        let liczba1 = imie.length;
+        let liczba2 = liczba1 + 7;
+        let liczba3 = nazwisko.length;
+        let liczba4 = liczba3 + 4;
+
+        let rozmiarCzcionki = 40 + (numerDziennika % 7);
+
+        document.write(<h1 style="color: green; font-size: ${rozmiarCzcionki}px;">${nazwisko} ${imie}</h1>);
+        document.write(<p style="color: green; font-size: ${rozmiarCzcionki}px;">Liczba1: ${liczba1}, Liczba2: ${liczba2}, Liczba3: ${liczba3}, Liczba4: ${liczba4}</p>);
+        
+        document.write(<div class='menu' style="color: red; font-size: ${rozmiarCzcionki}px;">);
+        document.write(1. Opcja 3 - Teoria o operatorach logicznych<br>);
+        document.write(2. Opcja 29 - Sprawdzenie przedziału (od ; do]<br>);
+        document.write(3. Opcja 58 - Sprawdzenie przedziału (-oo liczba1) lub [liczba2 +oo)<br>);
+        document.write(</div>);
+        
+        let opcja = parseInt(prompt("Wybierz numer opcji:"));
+        
+        if (opcja === 3) {
+            document.write("<p style='color: blue; font-size: 24px;'>Jesteś w opcji 3 --> teoria</p>");
+        } else if (opcja === 29) {
+            let liczbaSprawdzenie = parseInt(prompt("Podaj liczbę do sprawdzenia przedziału:"));
+            if (liczbaSprawdzenie >= liczba3 && liczbaSprawdzenie < liczba4) {
+                document.write("<p style='color: blue; font-size: 24px;'>Liczba należy do przedziału.</p>");
+            } else {
+                document.write("<p style='color: red; font-size: 24px;'>Liczba nie należy do przedziału.</p>");
+            }
+        } else if (opcja === 58) {
+            let liczbaSprawdzenie = parseInt(prompt("Podaj liczbę do sprawdzenia przedziału:"));
+            if (liczbaSprawdzenie < liczba1 || liczbaSprawdzenie >= liczba2) {
+                document.write("<p style='color: blue; font-size: 24px;'>Liczba należy do przedziału.</p>");
+            } else {
+                document.write("<p style='color: red; font-size: 24px;'>Liczba nie należy do przedziału.</p>");
+            }
+        } else {
+            document.write("<p style='color: red; font-size: 24px;'>Nie ma takiej opcji</p>");
+        }
+    </script>
+</body>
+</html>

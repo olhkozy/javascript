@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 57 – Pierwiastki</title>
+</head>
+<body>
+  <pre id="output"></pre>
+
+  <script>
+    const start = parseInt(prompt("Podaj swój numer w dzienniku:"));
+    const stop = start + 15;
+
+    const output = document.getElementById("output");
+    let linia = 0;
+
+    for (let i = start; i <= stop; i++) {
+      const pierw_2 = Math.sqrt(i).toFixed(2);
+      const pierw_4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+
+      output.innerHTML += `i=${i}  pierw_2(${i})=${pierw_2}  pierw_4(${i})=${pierw_4}\n`;
+      linia++;
+      
+      if (linia % 3 === 0 && i !== stop) {
+        alert("Kliknij OK, aby kontynuować...");
+      }
+    }
+  </script>
+</body>
+</html>

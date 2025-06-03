@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kozyr-Zadanie44</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const nazwisko = "Kozyr";
+    const imie = "Olha";
+    const ile_razy_koz = (nazwisko.length % 4) + 10; // = 11
+    const wielkosc_koz = (nazwisko.length % 3) + 40; // = 42
+    let licznik = localStorage.getItem("ile_otwarc");
+    if (licznik === null) {
+      licznik = 1;
+    } else {
+      licznik = parseInt(licznik) + 1;
+    }
+    localStorage.setItem("ile_otwarc", licznik);
+
+    const wynik = document.getElementById("output");
+    wynik.innerHTML += `<p>ilość wykonania pętli = ${ile_razy_koz}</p>`;
+    wynik.innerHTML += `<p>wielkość liter = ${wielkosc_koz}px</p>`;
+    wynik.innerHTML += `<p>liczba otwarć strony = ${licznik}</p><br>`;
+
+    if (licznik % 2 === 0) {
+      for (let i_k = 1; i_k <= ile_razy_koz; i_k++) {
+        wynik.innerHTML += `<span style="font-size: ${wielkosc_koz}px; color: green;">${i_k}. ${imie}</span><br>`;
+      }
+    } else {
+      for (let i_k = 1; i_k <= ile_razy_koz; i_k++) {
+        wynik.innerHTML += `<span style="font-size: ${wielkosc_koz}px; color: blue;">${i_k}. ${nazwisko}</span><br>`;
+      }
+    }
+  </script>
+</body>
+</html>

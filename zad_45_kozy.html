@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kozyr-Zadanie45</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const nazwisko = "Kozyr";
+    const imie = "Olha";
+
+    const ile_razy_koz = (nazwisko.length % 4) + 10; // = 11
+    const wielkosc_koz = (nazwisko.length % 3) + 40; // = 42
+
+    const liczba_koz = parseInt(prompt("Podaj liczbę całkowitą:"));
+
+    const wynik = document.getElementById("output");
+
+    wynik.innerHTML += `<p>ilość wykonania pętli = ${ile_razy_koz}</p>`;
+    wynik.innerHTML += `<p>wielkość liter = ${wielkosc_koz}px</p><br>`;
+
+    if (liczba_koz % 2 === 0) {
+      for (let i_k = 1; i_k <= ile_razy_koz; i_k++) {
+        wynik.innerHTML += `<span style="font-size:${wielkosc_koz}px; color:blue;">${i_k}. ${nazwisko}</span><br>`;
+      }
+    } else {
+      for (let i_k = 1; i_k <= ile_razy_koz; i_k++) {
+        wynik.innerHTML += `<span style="font-size:${wielkosc_koz}px; color:green;">${i_k}. ${imie}</span><br>`;
+      }
+    }
+  </script>
+</body>
+</html>
