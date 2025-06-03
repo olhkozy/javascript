@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Zadanie 58 – liczby nieparzyste</title>
 </head>
 <body>
-    prompt
+  <div id="output"></div>
+
+  <script>
+    const liczba1 = parseInt(prompt("Podaj pierwszą liczbę:"));
+    const liczba2 = parseInt(prompt("Podaj drugą liczbę:"));
+    const output = document.getElementById("output");
+
+    if (liczba1 === liczba2) {
+      confirm("Liczby są równe – brak obliczeń.");
+    } else if (liczba1 < liczba2) {
+      for (let i = liczba1 + 1; i < liczba2; i++) {
+        if (i % 2 !== 0) {
+          output.innerHTML += `<p style="color: green; font-size: 20px;">${i}</p>`;
+        }
+      }
+    } else {
+      for (let i = liczba1 - 1; i > liczba2; i--) {
+        if (i % 2 !== 0) {
+          output.innerHTML += `<p style="color: blue; font-size: 10px;">${i}</p>`;
+        }
+      }
+    }
+  </script>
 </body>
 </html>
